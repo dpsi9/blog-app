@@ -4,7 +4,6 @@ import userRoute from "./routes/user.route.js";
 import authRoute from "./routes/auth.route.js"
 
 
-
 const app = express();
 app.use(express.json());
 
@@ -25,7 +24,7 @@ connectDB()
 app.use("/api/user",userRoute);
 app.use("/api/auth",authRoute);
 
-
+//This is a global error handler middleware
 // app.use((err,req,res,next) => {
 //     const statusCode = err.statusCode || 500;
 //     const message = err.message || "Internal server error";
